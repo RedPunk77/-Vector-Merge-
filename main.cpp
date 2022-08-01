@@ -3,7 +3,7 @@
 using namespace std;
 vector <int> merge(vector<int> a, vector<int> b) {
     vector<int> c;
-    uint8_t i = 0, j = 0;
+    int i = 0, j = 0;
     while (i < a.size() && j < b.size()) {
         if (a[i] >= b[j]) {
             c.push_back(b[j]);
