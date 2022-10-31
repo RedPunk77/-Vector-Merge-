@@ -1,8 +1,28 @@
 #include <iostream>
+#include <algorithm>
+#include <bitset>
+#include <iomanip>
 #include <vector>
+#include <string>
+#include <typeinfo>
+#include <cmath>
+#include <map>
+#include <iterator>
+#include <numeric>
+#include <random>
+
 using namespace std;
-vector <int> merge(vector<int> a, vector<int> b) {
-    vector<int> c;
+using vll = vector <long long>;
+using chv = vector <char>;
+using ull = uint64_t;
+using ll = int64_t;
+using ui = uint32_t;
+using ush = uint16_t;
+const ull INF = 1e18;
+const double EPS = 1e-12;
+
+vector <int> merge(vector <int> a, vector <int> b) {
+    vector <int> c;
     int i = 0, j = 0;
     while (i < a.size() && j < b.size()) {
         if (a[i] >= b[j]) {
@@ -22,7 +42,13 @@ vector <int> merge(vector<int> a, vector<int> b) {
     }
     return c;
 }
+
 int main() {
+	
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+	
     int n1, n2;
     cin >> n1;
     vector <int> v1(n1);
